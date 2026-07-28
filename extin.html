@@ -1,0 +1,2125 @@
+!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterías Energía Total | Recarga y Venta de Baterías a Domicilio en Bogotá</title>
+    <meta name="description" content="Recarga de baterías, venta e instalación a domicilio en Bogotá y Colombia. Servicio rápido, diagnóstico profesional y atención inmediata por WhatsApp. Cobertura en toda Bogotá.">
+    <meta name="keywords" content="recarga de baterías Bogotá, baterías a domicilio Bogotá, venta de baterías para carro, cambio de batería a domicilio, baterías para vehículos, diagnóstico de batería, servicio de baterías urgente">
+    <meta name="author" content="Baterías Energía Total">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Baterías Energía Total | Recarga y Venta de Baterías a Domicilio">
+    <meta property="og:description" content="Servicio urgente de baterías a domicilio en Bogotá. Diagnóstico profesional, venta e instalación. Atención inmediata por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bateriasenergiatotal.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1632935937415-5e8e8b1f1b5f?w=1200&q=80">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0A1F3F">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='14' y='8' width='36' height='48' rx='4' fill='%2300B4D8' stroke='%230A1F3F' stroke-width='3'/><rect x='22' y='14' width='8' height='14' rx='2' fill='%230A1F3F'/><rect x='34' y='14' width='8' height='14' rx='2' fill='%230A1F3F'/><rect x='22' y='34' width='20' height='6' rx='2' fill='%230A1F3F'/><rect x='22' y='44' width='14' height='4' rx='2' fill='%230A1F3F'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --azul-oscuro: #0A1F3F;
+            --azul-medio: #1A3A6B;
+            --azul-electrico: #00B4D8;
+            --negro: #0B0B0B;
+            --blanco: #FFFFFF;
+            --gris-texto: #B0B8C4;
+            --gris-oscuro: #1E1E1E;
+            --sombra-electrica: 0 8px 32px rgba(0, 180, 216, 0.25);
+            --sombra-oscura: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transicion: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --borde-radius: 14px;
+            --borde-radius-lg: 22px;
+            --max-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+            color: var(--blanco);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* ============ PRELOADER ============ */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--azul-oscuro);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.7s ease, visibility 0.7s ease;
+            pointer-events: all;
+            overflow: hidden;
+        }
+        #preloader.oculto {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .bateria-preloader {
+            width: 90px;
+            height: 130px;
+            position: relative;
+            margin-bottom: 20px;
+            animation: flotarBateria 1.8s ease-in-out infinite;
+        }
+        @keyframes flotarBateria {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        .bateria-cuerpo-pre {
+            width: 70px;
+            height: 110px;
+            border: 4px solid var(--azul-electrico);
+            border-radius: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            background: rgba(0, 180, 216, 0.05);
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.4);
+        }
+        .bateria-terminal-pre {
+            width: 18px;
+            height: 10px;
+            background: var(--azul-electrico);
+            position: absolute;
+            top: 0;
+            left: 36px;
+            border-radius: 3px 3px 0 0;
+        }
+        .bateria-carga-pre {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, var(--azul-electrico), #48CAE4);
+            border-radius: 0 0 8px 8px;
+            height: 0%;
+            transition: height 0.15s ease;
+            box-shadow: 0 0 25px rgba(0, 180, 216, 0.7);
+        }
+        .chispa {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: chispaPreloader 0.8s infinite;
+            box-shadow: 0 0 12px var(--azul-electrico);
+        }
+        @keyframes chispaPreloader {
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-18px) scale(1.8);
+            }
+        }
+        .porcentaje-preloader {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--azul-electrico);
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .cargando-texto-pre {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .nombre-preloader {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--blanco);
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.7s ease;
+            letter-spacing: 0.5px;
+        }
+        .nombre-preloader.visible {
+            opacity: 1;
+        }
+        .nombre-preloader span {
+            color: var(--azul-electrico);
+        }
+        .btn-saltar-preloader {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            z-index: 10;
+            transition: var(--transicion);
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-saltar-preloader:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        /* ============ CANVAS DE FONDO ============ */
+        #fondoCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* ============ HEADER ============ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 14px 0;
+            transition: var(--transicion);
+            background: rgba(10, 31, 63, 0.7);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
+        }
+        header.scrolled {
+            background: rgba(10, 31, 63, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+        .header-contenedor {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: var(--blanco);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+            /* CAMBIAR NOMBRE EMPRESA: Reemplaza "Baterías Energía Total" */
+        }
+        .logo .icono-logo {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #00B4D8, #0077B6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.2rem;
+        }
+        .logo span {
+            color: var(--azul-electrico);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+            align-items: center;
+        }
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: var(--transicion);
+            white-space: nowrap;
+        }
+        nav ul li a:hover,
+        nav ul li a.activo {
+            color: var(--azul-electrico);
+            background: rgba(0, 180, 216, 0.1);
+        }
+        .btn-wsp-nav {
+            background: var(--azul-electrico) !important;
+            color: var(--azul-oscuro) !important;
+            font-weight: 700 !important;
+            padding: 10px 20px !important;
+            border-radius: 25px !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transicion);
+            font-size: 0.85rem !important;
+        }
+        .btn-wsp-nav:hover {
+            background: #0096c7 !important;
+            box-shadow: 0 0 25px rgba(0, 180, 216, 0.5);
+            transform: translateY(-2px);
+        }
+        .hamburguesa {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .hamburguesa span {
+            width: 28px;
+            height: 3px;
+            background: var(--blanco);
+            border-radius: 3px;
+            transition: var(--transicion);
+        }
+        .hamburguesa.activo span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+            background: var(--azul-electrico);
+        }
+        .hamburguesa.activo span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburguesa.activo span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+            background: var(--azul-electrico);
+        }
+
+        @media (max-width: 1024px) {
+            .hamburguesa {
+                display: flex;
+            }
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 320px;
+                max-width: 85vw;
+                height: 100vh;
+                background: rgba(10, 31, 63, 0.97);
+                backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(30px);
+                padding: 100px 30px 40px;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                border-left: 1px solid rgba(0, 180, 216, 0.2);
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+            }
+            nav.activo {
+                right: 0;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 4px;
+                align-items: stretch;
+            }
+            nav ul li a {
+                display: block;
+                padding: 14px 18px;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+            .btn-wsp-nav {
+                justify-content: center;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+
+        /* ============ SECCIONES GENERALES ============ */
+        .seccion {
+            position: relative;
+            z-index: 1;
+            padding: 90px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .seccion {
+                padding: 60px 16px;
+            }
+        }
+        .seccion-titulo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .seccion-titulo h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--blanco);
+        }
+        .seccion-titulo h2 span {
+            color: var(--azul-electrico);
+        }
+        .seccion-titulo p {
+            color: var(--gris-texto);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .seccion-titulo h2 {
+                font-size: 1.8rem;
+            }
+            .seccion-titulo p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ============ HERO ============ */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            padding: 120px 24px 70px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-contenido {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-insignia {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 180, 216, 0.1);
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            color: var(--azul-electrico);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero-insignia i {
+            font-size: 0.65rem;
+            animation: pulso 2s infinite;
+        }
+        @keyframes pulso {
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        .hero-titulo {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            color: var(--blanco);
+            line-height: 1.15;
+        }
+        .hero-titulo span {
+            color: var(--azul-electrico);
+        }
+        .hero-subtitulo {
+            font-size: 1.1rem;
+            color: var(--gris-texto);
+            margin-bottom: 24px;
+            max-width: 480px;
+        }
+        .hero-botones {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .btn-primario {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+            padding: 14px 26px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transicion);
+            border: none;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.2px;
+        }
+        .btn-primario:hover {
+            background: #0096c7;
+            box-shadow: var(--sombra-electrica);
+            transform: translateY(-3px);
+            color: var(--blanco);
+        }
+        .btn-secundario {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--azul-electrico);
+            padding: 14px 26px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 2px solid var(--azul-electrico);
+            transition: var(--transicion);
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .btn-secundario:hover {
+            background: rgba(0, 180, 216, 0.08);
+            box-shadow: var(--sombra-electrica);
+        }
+        .hero-indicadores {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--gris-texto);
+        }
+        .hero-indicadores span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hero-indicadores i {
+            color: var(--azul-electrico);
+        }
+        .hero-imagen {
+            position: relative;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        .hero-imagen .circulo-energia {
+            width: 100%;
+            aspect-ratio: 1/1;
+            max-width: 420px;
+            margin: 0 auto;
+            background: radial-gradient(circle at 40% 45%, rgba(0, 180, 216, 0.3) 0%, rgba(10, 31, 63, 0.4) 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 60px rgba(0, 180, 216, 0.2);
+            border: 2px solid rgba(0, 180, 216, 0.3);
+        }
+        .hero-imagen .circulo-energia .bateria-icono {
+            font-size: 8rem;
+            color: var(--azul-electrico);
+            opacity: 0.9;
+            animation: flotar 4s ease-in-out infinite;
+        }
+        @keyframes flotar {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+        .hero-imagen .chispa-decorativa {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 18px var(--azul-electrico);
+            animation: chispaFlotante 2.5s infinite;
+        }
+        @keyframes chispaFlotante {
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-imagen {
+                order: -1;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            .hero-titulo {
+                font-size: 2.1rem;
+            }
+            .hero-subtitulo {
+                font-size: 0.95rem;
+            }
+            #hero {
+                padding: 100px 16px 50px;
+            }
+        }
+
+        /* ============ FORMULARIO RÁPIDO HERO ============ */
+        .formulario-rapido {
+            background: rgba(10, 31, 63, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--borde-radius-lg);
+            padding: 28px 24px;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            box-shadow: var(--sombra-oscura);
+            margin-top: 24px;
+            max-width: 500px;
+        }
+        .formulario-rapido h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--blanco);
+        }
+        .form-rapido-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        @media (max-width: 480px) {
+            .form-rapido-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form-rapido-grid input,
+        .form-rapido-grid select {
+            padding: 11px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 180, 216, 0.25);
+            background: rgba(255, 255, 255, 0.06);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--blanco);
+            transition: var(--transicion);
+            width: 100%;
+        }
+        .form-rapido-grid input::placeholder,
+        .form-rapido-grid select {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .form-rapido-grid input:focus,
+        .form-rapido-grid select:focus {
+            outline: none;
+            border-color: var(--azul-electrico);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+        }
+        .form-rapido-grid .ancho-completo {
+            grid-column: 1 / -1;
+        }
+        .btn-form-rapido {
+            grid-column: 1 / -1;
+            padding: 12px;
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transicion);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-form-rapido:hover {
+            background: #0096c7;
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+            color: var(--blanco);
+        }
+
+        /* ============ BARRA DE CONFIANZA ============ */
+        .barra-confianza {
+            background: var(--azul-oscuro);
+            border-top: 1px solid rgba(0, 180, 216, 0.15);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
+            padding: 28px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .barra-confianza-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .barra-item {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            padding: 10px;
+            transition: var(--transicion);
+            cursor: default;
+            border-radius: 12px;
+        }
+        .barra-item:hover {
+            background: rgba(0, 180, 216, 0.05);
+            transform: translateY(-3px);
+        }
+        .barra-item i {
+            font-size: 1.8rem;
+            color: var(--azul-electrico);
+            margin-bottom: 6px;
+            transition: var(--transicion);
+        }
+        .barra-item:hover i {
+            transform: scale(1.1);
+        }
+        .barra-item p {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--blanco);
+        }
+
+        /* ============ TARJETAS DE SERVICIOS ============ */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .servicio-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 180, 216, 0.15);
+            border-radius: var(--borde-radius-lg);
+            padding: 30px 24px;
+            transition: var(--transicion);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .servicio-card:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            transform: translateY(-6px);
+            box-shadow: var(--sombra-electrica);
+        }
+        .servicio-card::after {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: var(--transicion);
+        }
+        .servicio-card:hover::after {
+            transform: scale(2.5);
+            opacity: 0.4;
+        }
+        .servicio-icono {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(0, 180, 216, 0.2), rgba(0, 119, 182, 0.2));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--azul-electrico);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .servicio-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--blanco);
+            position: relative;
+            z-index: 1;
+        }
+        .servicio-card p {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .servicio-card .btn-solicitar {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--azul-electrico);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            transition: var(--transicion);
+        }
+        .servicio-card .btn-solicitar:hover {
+            color: #48CAE4;
+            gap: 10px;
+        }
+
+        /* ============ CÓMO FUNCIONA ============ */
+        .pasos-contenedor {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pasos-linea-svg {
+            position: absolute;
+            top: 40px;
+            left: 8%;
+            right: 8%;
+            height: 4px;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .pasos-linea-svg {
+                display: none;
+            }
+            .pasos-contenedor {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }
+        }
+        .paso {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--borde-radius-lg);
+            padding: 30px 20px;
+            border: 1px solid rgba(0, 180, 216, 0.15);
+            transition: var(--transicion);
+        }
+        .paso:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            box-shadow: var(--sombra-electrica);
+            transform: translateY(-4px);
+        }
+        .paso-numero {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #00B4D8, #0077B6);
+            color: var(--blanco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin: 0 auto 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 6px 20px rgba(0, 180, 216, 0.3);
+        }
+        .paso h4 {
+            font-size: 0.95rem;
+            color: var(--blanco);
+            margin-bottom: 4px;
+        }
+        .paso p {
+            font-size: 0.85rem;
+            color: var(--gris-texto);
+        }
+
+        /* ============ COBERTURA ============ */
+        .cobertura-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .cobertura-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cobertura-mapa-visual {
+            background: linear-gradient(135deg, rgba(0, 180, 216, 0.1), rgba(0, 119, 182, 0.1));
+            border-radius: var(--borde-radius-lg);
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .cobertura-mapa-visual i {
+            font-size: 5rem;
+            color: var(--azul-electrico);
+            opacity: 0.6;
+            margin-bottom: 12px;
+        }
+        .zonas-lista {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            list-style: none;
+        }
+        .zonas-lista li {
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-left: 3px solid var(--azul-electrico);
+            color: var(--blanco);
+            font-weight: 500;
+        }
+        .zonas-lista li i {
+            color: var(--azul-electrico);
+            font-size: 0.7rem;
+        }
+        .consulta-cobertura-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .consulta-cobertura-input input {
+            flex: 1;
+            min-width: 180px;
+            padding: 12px 16px;
+            border-radius: 25px;
+            border: 1px solid rgba(0, 180, 216, 0.4);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--blanco);
+        }
+        .consulta-cobertura-input input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .consulta-cobertura-input button {
+            padding: 12px 20px;
+            border-radius: 25px;
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: var(--transicion);
+            white-space: nowrap;
+        }
+        .consulta-cobertura-input button:hover {
+            background: #0096c7;
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+            color: var(--blanco);
+        }
+
+        /* ============ BENEFICIOS ============ */
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .beneficio-item {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--borde-radius);
+            padding: 24px 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 180, 216, 0.1);
+            transition: var(--transicion);
+        }
+        .beneficio-item:hover {
+            border-color: rgba(0, 180, 216, 0.3);
+            box-shadow: var(--sombra-electrica);
+            transform: translateY(-3px);
+        }
+        .beneficio-item i {
+            font-size: 2rem;
+            color: var(--azul-electrico);
+            margin-bottom: 10px;
+        }
+        .beneficio-item h4 {
+            font-size: 0.95rem;
+            color: var(--blanco);
+            margin-bottom: 4px;
+        }
+        .beneficio-item p {
+            font-size: 0.8rem;
+            color: var(--gris-texto);
+        }
+
+        /* ============ PLANES ============ */
+        .planes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .plan-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--borde-radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+            border: 1px solid rgba(0, 180, 216, 0.15);
+            transition: var(--transicion);
+            position: relative;
+            overflow: hidden;
+        }
+        .plan-card:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            box-shadow: var(--sombra-electrica);
+            transform: translateY(-6px);
+        }
+        .plan-card.destacado {
+            border-color: var(--azul-electrico);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+        }
+        .plan-card .plan-icono {
+            font-size: 3rem;
+            color: var(--azul-electrico);
+            margin-bottom: 12px;
+        }
+        .plan-card h3 {
+            font-size: 1.3rem;
+            color: var(--blanco);
+            margin-bottom: 6px;
+        }
+        .plan-card p {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            margin-bottom: 16px;
+        }
+        .plan-card .btn-plan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transicion);
+            font-size: 0.9rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .plan-card .btn-plan:hover {
+            background: #0096c7;
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+            color: var(--blanco);
+        }
+
+        /* ============ TESTIMONIOS ============ */
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .testimonio-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--borde-radius-lg);
+            padding: 24px;
+            border: 1px solid rgba(0, 180, 216, 0.1);
+            transition: var(--transicion);
+            border-left: 4px solid var(--azul-electrico);
+        }
+        .testimonio-card:hover {
+            box-shadow: var(--sombra-electrica);
+            transform: translateY(-2px);
+        }
+        .testimonio-card .comillas {
+            font-size: 2rem;
+            color: var(--azul-electrico);
+            opacity: 0.5;
+            line-height: 1;
+        }
+        .testimonio-card p {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            font-style: italic;
+            margin: 8px 0;
+        }
+        .testimonio-card .testimonio-autor {
+            font-weight: 700;
+            color: var(--blanco);
+            font-size: 0.85rem;
+        }
+        .testimonio-card .testimonio-etiqueta {
+            font-size: 0.75rem;
+            color: var(--azul-electrico);
+            font-weight: 500;
+        }
+
+        /* ============ FAQ ============ */
+        .faq-acordeon {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: var(--borde-radius);
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 180, 216, 0.1);
+            overflow: hidden;
+            transition: var(--transicion);
+        }
+        .faq-item:hover {
+            border-color: rgba(0, 180, 216, 0.3);
+        }
+        .faq-pregunta {
+            padding: 18px 22px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transicion);
+            font-size: 0.95rem;
+            color: var(--blanco);
+        }
+        .faq-pregunta:hover {
+            color: var(--azul-electrico);
+        }
+        .faq-pregunta i {
+            transition: transform 0.35s ease;
+            color: var(--azul-electrico);
+            font-size: 0.9rem;
+        }
+        .faq-item.activo .faq-pregunta i {
+            transform: rotate(180deg);
+        }
+        .faq-respuesta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding 0.45s ease;
+        }
+        .faq-item.activo .faq-respuesta {
+            max-height: 300px;
+            padding: 0 22px 18px;
+        }
+        .faq-respuesta p {
+            color: var(--gris-texto);
+            font-size: 0.88rem;
+        }
+
+        /* ============ CTA FINAL ============ */
+        .cta-final {
+            background: linear-gradient(135deg, #0A1F3F 0%, #1A3A6B 100%);
+            text-align: center;
+            padding: 70px 24px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            color: var(--blanco);
+            border-top: 2px solid rgba(0, 180, 216, 0.3);
+            border-bottom: 2px solid rgba(0, 180, 216, 0.3);
+        }
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-final-contenido {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .cta-final h2 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: var(--blanco);
+        }
+        .cta-final p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .btn-cta-pulso {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+            padding: 16px 34px;
+            border-radius: 35px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transicion);
+            animation: pulsoBoton 2.5s infinite;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        @keyframes pulsoBoton {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 22px rgba(0, 180, 216, 0);
+            }
+        }
+        .btn-cta-pulso:hover {
+            background: #0096c7;
+            transform: scale(1.05);
+            animation: none;
+            box-shadow: 0 10px 40px rgba(0, 180, 216, 0.6);
+            color: var(--blanco);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: #070E1A;
+            padding: 50px 24px 24px;
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .footer-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .footer-col h4 {
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: var(--azul-electrico);
+        }
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: var(--transicion);
+        }
+        .footer-col a:hover {
+            color: var(--azul-electrico);
+        }
+        .footer-copy {
+            max-width: var(--max-width);
+            margin: 30px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ============ BOTONES FLOTANTES ============ */
+        .btn-flotante-wsp {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 998;
+            background: #25D366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            text-decoration: none;
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+            transition: var(--transicion);
+        }
+        .btn-flotante-wsp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 36px rgba(37, 211, 102, 0.7);
+        }
+        .btn-flotante-arriba {
+            position: fixed;
+            bottom: 100px;
+            right: 28px;
+            z-index: 998;
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: var(--azul-electrico);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            transition: var(--transicion);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .btn-flotante-arriba.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .btn-flotante-arriba:hover {
+            background: var(--azul-electrico);
+            color: var(--azul-oscuro);
+        }
+        @media (max-width: 600px) {
+            .btn-flotante-wsp {
+                width: 48px;
+                height: 48px;
+                font-size: 1.4rem;
+                bottom: 18px;
+                right: 14px;
+            }
+            .btn-flotante-arriba {
+                width: 38px;
+                height: 38px;
+                font-size: 0.95rem;
+                bottom: 80px;
+                right: 14px;
+            }
+        }
+
+        /* ============ UTILIDADES ============ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .notificacion {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1a8a3f;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 12px;
+            z-index: 10000;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transform: translateX(120%);
+            transition: transform 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .notificacion.visible {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="preloader">
+        <div class="bateria-preloader">
+            <div class="bateria-terminal-pre"></div>
+            <div class="bateria-cuerpo-pre">
+                <div class="bateria-carga-pre" id="bateriaCargaPre"></div>
+            </div>
+            <div class="chispa" style="top:5px;left:25px;"></div>
+            <div class="chispa" style="top:8px;left:55px;animation-delay:0.25s;"></div>
+            <div class="chispa" style="top:2px;left:68px;animation-delay:0.5s;"></div>
+        </div>
+        <div class="porcentaje-preloader" id="porcentajePreloader">0%</div>
+        <div class="cargando-texto-pre">Cargando energía...</div>
+        <!-- CAMBIAR NOMBRE EMPRESA: Reemplaza "Baterías Energía Total" -->
+        <div class="nombre-preloader" id="nombrePreloader">Baterías <span>Energía Total</span></div>
+        <button class="btn-saltar-preloader" id="btnSaltarPreloader" aria-label="Saltar introducción">Saltar</button>
+    </div>
+
+    <!-- ==================== CANVAS DE FONDO ==================== -->
+    <canvas id="fondoCanvas"></canvas>
+
+    <!-- ==================== HEADER ==================== -->
+    <header id="header">
+        <div class="header-contenedor">
+            <!-- CAMBIAR NOMBRE EMPRESA: Reemplaza el texto del logo -->
+            <a href="#hero" class="logo">
+                <div class="icono-logo"><i class="fas fa-car-battery"></i></div>
+                Baterías <span>Energía Total</span>
+            </a>
+            <button class="hamburguesa" id="hamburguesa" aria-label="Menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#hero" class="activo">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <!-- CAMBIAR NÚMERO WHATSAPP: Reemplaza 573001234567 -->
+                    <li><a href="https://wa.me/573171534659?text=Hola,%20quiero%20solicitar%20servicio%20de%20baterías." target="_blank" rel="noopener" class="btn-wsp-nav"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="seccion">
+        <div class="hero-grid">
+            <div class="hero-contenido">
+                <div class="hero-insignia">
+                    <i class="fas fa-circle"></i> Atención prioritaria en Bogotá · Cobertura en Colombia
+                </div>
+                <h1 class="hero-titulo">Recarga y venta de <span>baterías a domicilio</span> en Bogotá</h1>
+                <p class="hero-subtitulo">Servicio urgente, diagnóstico profesional y atención inmediata por WhatsApp. Llegamos hasta donde esté tu vehículo con técnicos especializados.</p>
+                <div class="hero-botones">
+                    <!-- CAMBIAR NÚMERO WHATSAPP -->
+                    <a href="https://wa.me/573171534659?text=Hola,%20necesito%20recarga%20de%20batería%20urgente." target="_blank" rel="noopener" class="btn-primario"><i class="fab fa-whatsapp"></i> Solicitar servicio urgente</a>
+                    <a href="#cobertura" class="btn-secundario"><i class="fas fa-map-marker-alt"></i> Consultar cobertura</a>
+                </div>
+                <div class="hero-indicadores">
+                    <span><i class="fas fa-check-circle"></i> Atención por WhatsApp</span>
+                    <span><i class="fas fa-check-circle"></i> Diagnóstico profesional</span>
+                    <span><i class="fas fa-check-circle"></i> Baterías garantizadas</span>
+                </div>
+                <!-- Formulario rápido -->
+                <div class="formulario-rapido" id="formRapido">
+                    <h4>⚡ Solicitud rápida por WhatsApp</h4>
+                    <div class="form-rapido-grid">
+                        <input type="text" id="rapidoNombre" placeholder="Nombre *" required>
+                        <input type="tel" id="rapidoTelefono" placeholder="Teléfono *" required>
+                        <input type="text" id="rapidoCiudad" placeholder="Ciudad *" required class="ancho-completo">
+                        <input type="text" id="rapidoBarrio" placeholder="Barrio o sector">
+                        <select id="rapidoServicio">
+                            <option value="">Tipo de servicio</option>
+                            <option value="Recarga de batería">Recarga de batería</option>
+                            <option value="Venta de batería">Venta de batería</option>
+                            <option value="Instalación a domicilio">Instalación a domicilio</option>
+                            <option value="Diagnóstico">Diagnóstico</option>
+                            <option value="Servicio urgente">Servicio urgente</option>
+                            <option value="Cambio de batería">Cambio de batería</option>
+                        </select>
+                        <input type="text" id="rapidoVehiculo" placeholder="Marca y modelo del vehículo">
+                        <button type="button" class="btn-form-rapido ancho-completo" id="btnFormRapido"><i class="fab fa-whatsapp"></i> Enviar solicitud por WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-imagen">
+                <div class="circulo-energia">
+                    <i class="fas fa-car-battery bateria-icono"></i>
+                    <div class="chispa-decorativa" style="top:20%;left:18%;animation-delay:0s;"></div>
+                    <div class="chispa-decorativa" style="top:30%;right:15%;animation-delay:0.6s;"></div>
+                    <div class="chispa-decorativa" style="bottom:25%;left:22%;animation-delay:1.2s;"></div>
+                    <div class="chispa-decorativa" style="bottom:30%;right:20%;animation-delay:0.9s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BARRA DE CONFIANZA ==================== -->
+    <div class="barra-confianza">
+        <div class="barra-confianza-grid">
+            <div class="barra-item"><i class="fas fa-bolt"></i><p>Servicio rápido</p></div>
+            <div class="barra-item"><i class="fas fa-home"></i><p>Entrega a domicilio</p></div>
+            <div class="barra-item"><i class="fas fa-tools"></i><p>Diagnóstico profesional</p></div>
+            <div class="barra-item"><i class="fas fa-shield-alt"></i><p>Baterías garantizadas</p></div>
+            <div class="barra-item"><i class="fas fa-map-marked-alt"></i><p>Cobertura en Bogotá</p></div>
+            <div class="barra-item"><i class="fab fa-whatsapp"></i><p>Pedidos por WhatsApp</p></div>
+        </div>
+    </div>
+
+    <!-- ==================== SERVICIOS ==================== -->
+    <section id="servicios" class="seccion">
+        <div class="seccion-titulo fade-in">
+            <h2>Nuestros <span>Servicios</span></h2>
+            <p>Soluciones completas para el sistema eléctrico de tu vehículo. Atención profesional a domicilio en Bogotá.</p>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-charging-station"></i></div>
+                <h3>Recarga de baterías</h3>
+                <p>Recarga profesional con equipos especializados. Recupera la energía de tu batería sin salir de casa.</p>
+                <a href="https://wa.me/573001234567?text=Hola,%20solicito%20recarga%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-car-battery"></i></div>
+                <h3>Venta de baterías</h3>
+                <p>Baterías de las mejores marcas con garantía. Stock disponible para entrega inmediata a domicilio.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20quiero%20comprar%20una%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-tools"></i></div>
+                <h3>Instalación a domicilio</h3>
+                <p>Instalación profesional en el lugar donde te encuentres. Sin necesidad de mover tu vehículo.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20necesito%20instalación%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-stethoscope"></i></div>
+                <h3>Diagnóstico de batería</h3>
+                <p>Evaluación completa del estado de tu batería y sistema de carga con equipos de diagnóstico precisos.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20solicito%20diagnóstico%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3>Servicio urgente</h3>
+                <p>Atención prioritaria para vehículos que no encienden. Respuesta rápida en toda Bogotá.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20necesito%20servicio%20urgente%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="servicio-card fade-in">
+                <div class="servicio-icono"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Cambio de batería</h3>
+                <p>Cambio rápido y seguro de batería. Retiramos la batería usada y realizamos disposición responsable.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20necesito%20cambio%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CÓMO FUNCIONA ==================== -->
+    <section id="como-funciona" class="seccion" style="background:rgba(30,30,30,0.3);max-width:100%;padding-left:0;padding-right:0;">
+        <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+            <div class="seccion-titulo fade-in">
+                <h2>¿Cómo <span>Funciona?</span></h2>
+                <p>Un proceso simple y rápido para volver al camino sin complicaciones.</p>
+            </div>
+            <div class="pasos-contenedor">
+                <svg class="pasos-linea-svg" viewBox="0 0 800 8" preserveAspectRatio="none">
+                    <path d="M0,4 L800,4" stroke="url(#gradienteLinea)" stroke-width="3" stroke-dasharray="12 8" fill="none"/>
+                    <defs>
+                        <linearGradient id="gradienteLinea" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.2"/>
+                            <stop offset="50%" stop-color="#00B4D8" stop-opacity="0.8"/>
+                            <stop offset="100%" stop-color="#00B4D8" stop-opacity="0.2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="paso fade-in">
+                    <div class="paso-numero">1</div>
+                    <h4>Escríbenos por WhatsApp</h4>
+                    <p>Contáctanos indicando el servicio que necesitas y tu ubicación.</p>
+                </div>
+                <div class="paso fade-in">
+                    <div class="paso-numero">2</div>
+                    <h4>Ubicación y tipo de vehículo</h4>
+                    <p>Indícanos dónde te encuentras y las características de tu vehículo.</p>
+                </div>
+                <div class="paso fade-in">
+                    <div class="paso-numero">3</div>
+                    <h4>Confirmamos disponibilidad</h4>
+                    <p>Verificamos cobertura y te damos cotización sin compromiso.</p>
+                </div>
+                <div class="paso fade-in">
+                    <div class="paso-numero">4</div>
+                    <h4>Técnico en tu ubicación</h4>
+                    <p>Un técnico especializado llega hasta donde estás para solucionar el problema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COBERTURA ==================== -->
+    <section id="cobertura" class="seccion">
+        <div class="seccion-titulo fade-in">
+            <h2>Servicio prioritario en <span>Bogotá</span></h2>
+            <p>También atendemos solicitudes en diferentes ciudades de Colombia. Consulta disponibilidad en tu ubicación.</p>
+        </div>
+        <div class="cobertura-grid">
+            <div class="cobertura-mapa-visual fade-in">
+                <i class="fas fa-map-marked-alt"></i>
+                <p style="color:var(--blanco);font-weight:600;">Cobertura en Bogotá</p>
+                <p style="color:var(--gris-texto);font-size:0.85rem;">Norte · Sur · Centro · Occidente · Localidades y barrios con disponibilidad</p>
+            </div>
+            <div class="fade-in">
+                <h3 style="margin-bottom:12px;color:var(--blanco);">Zonas de cobertura <span style="color:var(--azul-electrico);">en Bogotá</span></h3>
+                <ul class="zonas-lista">
+                    <li><i class="fas fa-check-circle"></i> Norte de Bogotá</li>
+                    <li><i class="fas fa-check-circle"></i> Sur de Bogotá</li>
+                    <li><i class="fas fa-check-circle"></i> Centro</li>
+                    <li><i class="fas fa-check-circle"></i> Occidente</li>
+                    <li><i class="fas fa-check-circle"></i> Chapinero, Suba, Usaquén</li>
+                    <li><i class="fas fa-check-circle"></i> Kennedy, Engativá, Fontibón</li>
+                </ul>
+                <p style="color:var(--gris-texto);font-size:0.8rem;margin-top:8px;">* Consulta la disponibilidad exacta para tu barrio o localidad.</p>
+                <div class="consulta-cobertura-input">
+                    <input type="text" id="consultaBarrio" placeholder="Escribe tu localidad o barrio">
+                    <button type="button" id="btnConsultaCobertura"><i class="fab fa-whatsapp"></i> Consultar</button>
+                </div>
+                <p style="color:var(--gris-texto);font-size:0.85rem;margin-top:12px;"><strong>También ofrecemos asesoría y venta en otras ciudades de Colombia.</strong> La cobertura, tiempos y condiciones deben confirmarse directamente con un asesor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BENEFICIOS ==================== -->
+    <section id="beneficios" class="seccion" style="background:rgba(30,30,30,0.3);max-width:100%;padding-left:0;padding-right:0;">
+        <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+            <div class="seccion-titulo fade-in">
+                <h2>¿Por qué <span>elegirnos?</span></h2>
+                <p>Beneficios que nos convierten en el servicio de baterías que Bogotá recomienda.</p>
+            </div>
+            <div class="beneficios-grid">
+                <div class="beneficio-item fade-in"><i class="fas fa-bolt"></i><h4>Rapidez</h4><p>Respuesta ágil a tu solicitud.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-user-check"></i><h4>Atención personalizada</h4><p>Soluciones adaptadas a tu vehículo.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-thumbs-up"></i><h4>Pedidos fáciles</h4><p>Solicita en pocos pasos por WhatsApp.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-medal"></i><h4>Productos garantizados</h4><p>Garantía real en cada batería.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-calendar-alt"></i><h4>Servicio programable</h4><p>Planes para flotas y empresas.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-home"></i><h4>Domicilio sin costo extra</h4><p>Llegamos hasta tu ubicación.</p></div>
+                <div class="beneficio-item fade-in"><i class="fas fa-comments"></i><h4>Asesoría por expertos</h4><p>Te ayudamos a elegir la batería ideal.</p></div>
+                <div class="beneficio-item fade-in"><i class="fab fa-whatsapp"></i><h4>Contacto directo</h4><p>Comunicación inmediata y eficaz.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PLANES ==================== -->
+    <section class="seccion">
+        <div class="seccion-titulo fade-in">
+            <h2>Modalidades de <span>Servicio</span></h2>
+            <p>Elige la opción que mejor se adapte a tus necesidades.</p>
+        </div>
+        <div class="planes-grid">
+            <div class="plan-card fade-in">
+                <div class="plan-icono">🚗</div>
+                <h3>Particular</h3>
+                <p>Para propietarios de vehículos que necesitan recarga, diagnóstico o cambio de batería.</p>
+                <a href="https://wa.me/5731715346597?text=Hola,%20quiero%20cotizar%20servicio%20de%20batería%20para%20mi%20vehículo." target="_blank" rel="noopener" class="btn-plan">Cotizar por WhatsApp</a>
+            </div>
+            <div class="plan-card fade-in destacado">
+                <div class="plan-icono">🚐</div>
+                <h3>Flotas y Negocios</h3>
+                <p>Para empresas con varios vehículos, talleres o comercios que requieren suministro recurrente.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20necesito%20plan%20para%20flota%20de%20vehículos." target="_blank" rel="noopener" class="btn-plan">Consultar disponibilidad</a>
+            </div>
+            <div class="plan-card fade-in">
+                <div class="plan-icono">🏢</div>
+                <h3>Corporativo</h3>
+                <p>Para organizaciones con necesidades programadas de mantenimiento y cambio de baterías.</p>
+                <a href="https://wa.me/573171534659?text=Hola,%20quiero%20crear%20un%20plan%20corporativo%20de%20baterías." target="_blank" rel="noopener" class="btn-plan">Crear mi plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIOS ==================== -->
+    <section class="seccion" style="background:rgba(30,30,30,0.3);max-width:100%;padding-left:0;padding-right:0;">
+        <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+            <div class="seccion-titulo fade-in">
+                <h2>Lo que dicen <span>nuestros clientes</span></h2>
+                <p>Ejemplos editables. Reemplaza con testimonios reales de clientes.</p>
+                <!-- COMENTARIO: Reemplazar estos testimonios de ejemplo por opiniones reales -->
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card fade-in">
+                    <div class="comillas">"</div>
+                    <!-- COMENTARIO: Reemplaza este texto con un testimonio real -->
+                    <p>Agrega aquí el testimonio real de un cliente satisfecho con el servicio de baterías a domicilio.</p>
+                    <p class="testimonio-autor">Nombre del cliente</p>
+                    <p class="testimonio-etiqueta">Bogotá · Servicio urgente</p>
+                </div>
+                <div class="testimonio-card fade-in">
+                    <div class="comillas">"</div>
+                    <!-- COMENTARIO: Reemplaza este texto con un testimonio real -->
+                    <p>Agrega aquí el testimonio real de un cliente satisfecho con el servicio de baterías a domicilio.</p>
+                    <p class="testimonio-autor">Nombre del cliente</p>
+                    <p class="testimonio-etiqueta">Bogotá · Cambio de batería</p>
+                </div>
+                <div class="testimonio-card fade-in">
+                    <div class="comillas">"</div>
+                    <!-- COMENTARIO: Reemplaza este texto con un testimonio real -->
+                    <p>Agrega aquí el testimonio real de un cliente satisfecho con el servicio de baterías a domicilio.</p>
+                    <p class="testimonio-autor">Nombre del cliente</p>
+                    <p class="testimonio-etiqueta">Colombia · Venta de batería</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="seccion">
+        <div class="seccion-titulo fade-in">
+            <h2>Preguntas <span>Frecuentes</span></h2>
+            <p>Respuestas claras para que tomes la mejor decisión.</p>
+        </div>
+        <div class="faq-acordeon">
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Atienden emergencias de baterías? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Sí, atendemos emergencias los 7 días de la semana. Si tu vehículo no enciende, contáctanos por WhatsApp y llegamos hasta tu ubicación lo antes posible.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿El servicio es a domicilio? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Todos nuestros servicios incluyen atención a domicilio en Bogotá. No necesitas mover tu vehículo, nosotros llegamos hasta donde te encuentres.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Qué zonas de Bogotá cubren? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Cubrimos las principales zonas de Bogotá. La disponibilidad exacta para tu barrio se confirma al momento de tu consulta por WhatsApp.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Pueden revisar el alternador? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Sí, ofrecemos diagnóstico completo del sistema de carga incluyendo revisión del alternador para determinar la causa de la falla.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Cuánto tarda el servicio? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>El tiempo de respuesta promedio es de 25 a 45 minutos en Bogotá, dependiendo de tu ubicación. El servicio en sí toma entre 15 y 30 minutos.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Las baterías tienen garantía? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Sí, todas nuestras baterías nuevas incluyen garantía desde 6 hasta 24 meses dependiendo del modelo. Consulta los términos específicos.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Qué medios de pago reciben? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Aceptamos efectivo, transferencias y pagos digitales. Consulta las opciones disponibles para tu servicio por WhatsApp.</p></div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-pregunta">¿Atienden fuera de Bogotá? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-respuesta"><p>Ofrecemos asesoría, venta y coordinación de servicios en diferentes ciudades de Colombia. Consulta disponibilidad en tu ubicación por WhatsApp.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <div class="cta-final" id="contacto">
+        <div class="cta-final-contenido">
+            <h2>¿Necesitas batería a domicilio?</h2>
+            <p>Solicita tu recarga, diagnóstico o cambio en pocos minutos. Nuestro equipo verificará la disponibilidad en tu zona.</p>
+            <!-- CAMBIAR NÚMERO WHATSAPP -->
+            <a href="https://wa.me/573171534659?text=Hola,%20necesito%20servicio%20de%20baterías%20a%20domicilio." target="_blank" rel="noopener" class="btn-cta-pulso"><i class="fab fa-whatsapp"></i> Pedir servicio por WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <!-- CAMBIAR NOMBRE EMPRESA -->
+                <h4>Baterías Energía Total</h4>
+                <p>Líderes en recarga de baterías a domicilio. Servicio rápido, confiable y con atención directa por WhatsApp en Bogotá y Colombia.</p>
+                <!-- CAMBIAR NÚMERO WHATSAPP, CORREO y HORARIOS -->
+                <p><i class="fab fa-whatsapp"></i> +57 300 123 4567</p>
+                <p><i class="fas fa-envelope"></i> contacto@bateriasenergiatotal.com</p>
+                <p><i class="fas fa-clock"></i> Horarios: consultar por WhatsApp</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces rápidos</h4>
+                <a href="#hero">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#cobertura">Cobertura</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#faq">Preguntas Frecuentes</a>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <a href="#servicios">Recarga de baterías</a>
+                <a href="#servicios">Venta de baterías</a>
+                <a href="#servicios">Instalación a domicilio</a>
+                <a href="#servicios">Diagnóstico</a>
+                <a href="#servicios">Servicio urgente</a>
+                <a href="#servicios">Cambio de batería</a>
+            </div>
+            <div class="footer-col">
+                <h4>Cobertura</h4>
+                <a href="#cobertura">Bogotá</a>
+                <a href="#cobertura">Colombia</a>
+                <!-- CAMBIAR REDES SOCIALES -->
+                <h4 style="margin-top:12px;">Redes Sociales</h4>
+                <div style="display:flex;gap:10px;font-size:1.2rem;">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; <span id="anioCopyright"></span> Baterías Energía Total. Todos los derechos reservados. | <a href="#" style="color:rgba(255,255,255,0.4);">Aviso de privacidad</a> | <a href="#" style="color:rgba(255,255,255,0.4);">Términos y condiciones</a></p>
+            <p style="font-size:0.75rem;margin-top:4px;">La disponibilidad del servicio depende de la zona. Consulta con un asesor por WhatsApp.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTONES FLOTANTES ==================== -->
+    <!-- CAMBIAR NÚMERO WHATSAPP: Reemplazar 573001234567 -->
+    <a href="https://wa.me/573171534659?text=Hola,%20quiero%20solicitar%20una%20recarga%20de%20batería%20a%20domicilio." target="_blank" rel="noopener" class="btn-flotante-wsp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#hero" class="btn-flotante-arriba" id="btnArriba" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Notificación -->
+    <div class="notificacion" id="notificacion">✅ Solicitud lista. Abriendo WhatsApp...</div>
+
+    <script>
+        // ==================== PRELOADER ====================
+        (function() {
+            const preloader = document.getElementById('preloader');
+            const bateriaCarga = document.getElementById('bateriaCargaPre');
+            const porcentajeTexto = document.getElementById('porcentajePreloader');
+            const nombrePreloader = document.getElementById('nombrePreloader');
+            const btnSaltar = document.getElementById('btnSaltarPreloader');
+            let porcentaje = 0;
+            const duracionTotal = 2200;
+            const intervalo = 25;
+            const incremento = 100 / (duracionTotal / intervalo);
+            let preloaderOculto = false;
+
+            function ocultarPreloader() {
+                if (preloaderOculto) return;
+                preloaderOculto = true;
+                preloader.classList.add('oculto');
+                document.body.style.overflow = '';
+            }
+
+            const intervaloID = setInterval(() => {
+                porcentaje += incremento;
+                if (porcentaje >= 100) {
+                    porcentaje = 100;
+                    clearInterval(intervaloID);
+                    bateriaCarga.style.height = '100%';
+                    porcentajeTexto.textContent = '100%';
+                    nombrePreloader.classList.add('visible');
+                    setTimeout(ocultarPreloader, 600);
+                } else {
+                    bateriaCarga.style.height = porcentaje + '%';
+                    porcentajeTexto.textContent = Math.floor(porcentaje) + '%';
+                    if (porcentaje > 70) nombrePreloader.classList.add('visible');
+                }
+            }, intervalo);
+
+            btnSaltar.addEventListener('click', () => {
+                clearInterval(intervaloID);
+                ocultarPreloader();
+            });
+
+            document.body.style.overflow = 'hidden';
+        })();
+
+        // ==================== CANVAS DE FONDO (PARTÍCULAS ELÉCTRICAS) ====================
+        (function() {
+            const canvas = document.getElementById('fondoCanvas');
+            const ctx = canvas.getContext('2d');
+            let particulas = [];
+            const maxParticulas = 70;
+
+            function redimensionarCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            redimensionarCanvas();
+            window.addEventListener('resize', redimensionarCanvas);
+
+            class Particula {
+                constructor() {
+                    this.reset(true);
+                }
+                reset(inicial = false) {
+                    this.x = Math.random() * canvas.width;
+                    this.y = inicial ? Math.random() * canvas.height : -10;
+                    this.radio = Math.random() * 2.5 + 0.8;
+                    this.velocidadY = Math.random() * 0.4 + 0.15;
+                    this.velocidadX = (Math.random() - 0.5) * 0.3;
+                    this.opacidad = Math.random() * 0.5 + 0.15;
+                }
+                actualizar() {
+                    this.y += this.velocidadY;
+                    this.x += this.velocidadX;
+                    if (this.y > canvas.height + 20) {
+                        this.reset();
+                        this.y = -10;
+                    }
+                    if (this.x < -20) this.x = canvas.width + 20;
+                    if (this.x > canvas.width + 20) this.x = -20;
+                }
+                dibujar(ctx) {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radio, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0,180,216,${this.opacidad})`;
+                    ctx.shadowColor = 'rgba(0,180,216,0.7)';
+                    ctx.shadowBlur = this.radio * 5;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            for (let i = 0; i < maxParticulas; i++) {
+                particulas.push(new Particula());
+            }
+
+            function animarFondo() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particulas.forEach(p => {
+                    p.actualizar();
+                    p.dibujar(ctx);
+                });
+                // Conexiones eléctricas entre partículas cercanas
+                for (let i = 0; i < particulas.length; i++) {
+                    for (let j = i + 1; j < particulas.length; j++) {
+                        const dx = particulas[i].x - particulas[j].x;
+                        const dy = particulas[i].y - particulas[j].y;
+                        const distancia = Math.sqrt(dx * dx + dy * dy);
+                        if (distancia < 100) {
+                            ctx.beginPath();
+                            ctx.moveTo(particulas[i].x, particulas[i].y);
+                            ctx.lineTo(particulas[j].x, particulas[j].y);
+                            ctx.strokeStyle = `rgba(0,180,216,${0.12 * (1 - distancia/100)})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animarFondo);
+            }
+            animarFondo();
+        })();
+
+        // ==================== HEADER SCROLL ====================
+        const header = document.getElementById('header');
+        const btnArriba = document.getElementById('btnArriba');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+                btnArriba.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                btnArriba.classList.remove('visible');
+            }
+        });
+
+        // ==================== MENÚ HAMBURGUESA ====================
+        const hamburguesa = document.getElementById('hamburguesa');
+        const nav = document.getElementById('nav');
+        hamburguesa.addEventListener('click', () => {
+            hamburguesa.classList.toggle('activo');
+            nav.classList.toggle('activo');
+        });
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburguesa.classList.remove('activo');
+                nav.classList.remove('activo');
+            });
+        });
+
+        // ==================== FADE-IN AL SCROLL ====================
+        const elementosFade = document.querySelectorAll('.fade-in');
+        const observerFade = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observerFade.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+        elementosFade.forEach(el => observerFade.observe(el));
+
+        // ==================== FORMULARIO RÁPIDO ====================
+        // CAMBIAR NÚMERO WHATSAPP: Reemplazar 573171534659
+        const NUMERO_WHATSAPP = '573171534659';
+        const notificacion = document.getElementById('notificacion');
+
+        function mostrarNotificacion() {
+            notificacion.classList.add('visible');
+            setTimeout(() => notificacion.classList.remove('visible'), 3000);
+        }
+
+        document.getElementById('btnFormRapido').addEventListener('click', () => {
+            const nombre = document.getElementById('rapidoNombre').value.trim();
+            const telefono = document.getElementById('rapidoTelefono').value.trim();
+            const ciudad = document.getElementById('rapidoCiudad').value.trim();
+            const barrio = document.getElementById('rapidoBarrio').value.trim();
+            const servicio = document.getElementById('rapidoServicio').value;
+            const vehiculo = document.getElementById('rapidoVehiculo').value.trim();
+
+            if (!nombre || !telefono || !ciudad) {
+                alert('Por favor completa los campos obligatorios: Nombre, Teléfono y Ciudad.');
+                return;
+            }
+
+            const mensaje = `🔋 *SOLICITUD DE SERVICIO DE BATERÍAS*\n\n` +
+                `👤 *Nombre:* ${nombre}\n` +
+                `📱 *Teléfono:* ${telefono}\n` +
+                `📍 *Ciudad:* ${ciudad}\n` +
+                `🏘️ *Barrio/Sector:* ${barrio || 'No especificado'}\n` +
+                `🔧 *Servicio:* ${servicio || 'No especificado'}\n` +
+                `🚗 *Vehículo:* ${vehiculo || 'No especificado'}\n\n` +
+                `_Enviado desde el formulario rápido._`;
+
+            mostrarNotificacion();
+            setTimeout(() => {
+                window.open(`https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`,
+                    '_blank', 'noopener');
+            }, 400);
+        });
+
+        // ==================== CONSULTA COBERTURA ====================
+        document.getElementById('btnConsultaCobertura').addEventListener('click', () => {
+            const barrio = document.getElementById('consultaBarrio').value.trim();
+            const mensaje = barrio ?
+                `Hola, quiero consultar la disponibilidad de servicio de baterías en ${barrio}.` :
+                'Hola, quiero consultar la cobertura de servicio de baterías en mi zona.';
+            mostrarNotificacion();
+            setTimeout(() => {
+                window.open(`https://wa.me/${3171534659}?text=${encodeURIComponent(mensaje)}`,
+                    '_blank', 'noopener');
+            }, 400);
+        });
+
+        // ==================== FAQ ACORDEÓN ====================
+        document.querySelectorAll('.faq-pregunta').forEach(pregunta => {
+            pregunta.addEventListener('click', () => {
+                const faqItem = pregunta.parentElement;
+                const estabaActivo = faqItem.classList.contains('activo');
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove(
+                    'activo'));
+                if (!estabaActivo) {
+                    faqItem.classList.add('activo');
+                }
+            });
+        });
+
+        // ==================== COPYRIGHT DINÁMICO ====================
+        document.getElementById('anioCopyright').textContent = new Date().getFullYear();
+
+        // ==================== NAVEGACIÓN ACTIVA ====================
+        const secciones = document.querySelectorAll('section[id], div[id]');
+        const navLinks = document.querySelectorAll('nav ul li a:not(.btn-wsp-nav)');
+        window.addEventListener('scroll', () => {
+            let seccionActual = '';
+            secciones.forEach(seccion => {
+                const rect = seccion.getBoundingClientRect();
+                if (rect.top <= 160 && rect.bottom >= 160) {
+                    seccionActual = seccion.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('activo');
+                if (link.getAttribute('href') === '#' + seccionActual) {
+                    link.classList.add('activo');
+                }
+            });
+        });
+
+        // ==================== BOTÓN VOLVER ARRIBA ====================
+        btnArriba.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
